@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:li_night_run1/tabs/first.dart';
-import 'package:li_night_run1/tabs/second.dart';
-import 'package:li_night_run1/tabs/third.dart';
-import 'package:li_night_run1/tabs/fourth.dart';
-import 'package:li_night_run1/tabs/fifth.dart';
+import 'package:li_night_run/custom_widgets/blocks.dart';
+
+import 'package:li_night_run/tabs/first.dart';
+import 'package:li_night_run/tabs/second.dart';
+import 'package:li_night_run/tabs/third.dart';
+import 'package:li_night_run/tabs/fourth.dart';
+import 'package:li_night_run/tabs/fifth.dart';
 
 void main() {
   runApp(MaterialApp(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:li_night_run/custom_widgets/blocks.dart';
 
+// Search Page
 class SecondTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,13 +13,19 @@ class SecondTab extends StatelessWidget {
             // center the children
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Text('Pinned'),
+                ]
+              ),
+              Row(),
               Icon(
                 Icons.search,
                 size: 160.0,
                 color: Colors.white,
               ),
               Text(
-                "Second Tab",
+                'Second Tab',
                 style: TextStyle(color: Colors.white),
               )
             ],
