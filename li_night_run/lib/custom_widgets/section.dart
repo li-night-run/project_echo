@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
-import 'blocks.dart';
+import 'block.dart';
 
 /* 
  * Section
@@ -14,7 +14,7 @@ import 'blocks.dart';
  */
 class Section extends StatelessWidget {
   final String title;
-  final List<Blocks> database;
+  final List<Block> database;
   final Axis axis;
 
   // database should be @required, turned off for testing purposes
@@ -24,46 +24,49 @@ class Section extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget view = database == null || database.isEmpty
         ? ListView(scrollDirection: axis, children: <Widget>[
-            Container(
-              height: 150,
-              width: 200,
-              color: Colors.grey[300],
+            Block(
+              image:
+                  'https://scontent-lga3-1.cdninstagram.com/vp/580838019951159410138acea99ad0b9/5DCA52BA/t51.2885-15/e35/61467097_142658200134081_6309863923507155602_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com',
+              title: 'title',
+              subtitle: 'subtitle',
             ),
-            Container(
-              height: 150,
-              width: 200,
-              color: Colors.pink[300],
+            Block(
+              image:
+                  'https://scontent-lga3-1.cdninstagram.com/vp/580838019951159410138acea99ad0b9/5DCA52BA/t51.2885-15/e35/61467097_142658200134081_6309863923507155602_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com',
+              title: 'title',
+              subtitle: 'subtitle',
             ),
-            Container(
-              height: 150,
-              width: 200,
-              color: Colors.grey[300],
+            Block(
+              image:
+                  'https://scontent-lga3-1.cdninstagram.com/vp/580838019951159410138acea99ad0b9/5DCA52BA/t51.2885-15/e35/61467097_142658200134081_6309863923507155602_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com',
+              title: 'title',
+              subtitle: 'subtitle',
             ),
-            Container(
-              height: 150,
-              width: 200,
-              color: Colors.pink[300],
+            Block(
+              image:
+                  'https://scontent-lga3-1.cdninstagram.com/vp/580838019951159410138acea99ad0b9/5DCA52BA/t51.2885-15/e35/61467097_142658200134081_6309863923507155602_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com',
+              title: 'title',
+              subtitle: 'subtitle',
             ),
           ])
         : ListView(
-            scrollDirection: axis,
-            children: <Widget>[
+            scrollDirection: Axis.horizontal,
+            children: <Block>[
               ...(database).map((block) {
-                return Blocks(
+                return Block(
                   image: block.image,
-                  line: block.line,
-                  line1: block.line1,
-                  list: block.list,
+                  title: block.title,
+                  subtitle: block.subtitle,
                 );
               }).toList()
             ],
           );
 
     return Container(
-      height: 150,
+        height: 150,
         child: Column(children: <Widget>[
-      Text(title),
-      view,
-    ]));
+          Text(title),
+          view,
+        ]));
   }
 }
