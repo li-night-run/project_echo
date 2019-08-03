@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:li_night_run/custom_widgets/blocks.dart';
 
 import 'package:li_night_run/tabs/first.dart';
 import 'package:li_night_run/tabs/second.dart';
@@ -17,13 +16,17 @@ void main() {
 
 class MyHome extends StatefulWidget {
   @override
-  MyHomeState createState() => MyHomeState();
+  State<StatefulWidget> createState() {
+    return _MyHome();
+  }
 }
 
 // SingleTickerProviderStateMixin is used for animation
-class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
+class _MyHome extends State<MyHome> with SingleTickerProviderStateMixin {
+
   // Create a tab controller
   TabController controller;
+  bool offline;
 
   @override
   void initState() {
@@ -88,3 +91,4 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
     );
   }
 }
+

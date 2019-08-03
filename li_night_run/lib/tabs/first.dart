@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:li_night_run/custom_widgets/blocks.dart';
+import '../custom_widgets/section.dart';
 
 // Home Page
 class FirstTab extends StatelessWidget {
