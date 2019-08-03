@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:li_night_run/custom_widgets/blocks.dart';
+import 'package:li_night_run/custom_widgets/distribute.dart';
 
 // Search Page
 class SecondTab extends StatelessWidget {
@@ -16,6 +17,12 @@ class SecondTab extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Text('Pinned'),
+                  ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      Distrbute( /* List<Block> database */),
+                    ],
+                  )
                 ]
               ),
               Row(),
